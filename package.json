@@ -11,7 +11,7 @@
   },
   "author":
     "Tom Lagier <tom@gliffy.com> (http://gliffy.com)",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "graphql": "^0.13.2",
     "graphql-tag": "^2.8.0",

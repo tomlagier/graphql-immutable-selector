@@ -23,6 +23,7 @@ class MyUserComponent extends Component {
 
 const gql = 'query { user { name } }';
 export connect(graphqlImmutableSelector(gql))(MyUserComponent);
+// -> MyUserComponent rendered with props that match Map({ user : {name: 'value' }})
 ```
 
 ### As a standalone to select from state
@@ -43,6 +44,7 @@ const state = fromJS({
 });
 
 const tedProperties = getUser(state);
+// -> Map({user: {name: 'Ted'}})
 ```
 
 ### To parse GQL into an array of object paths
@@ -72,7 +74,8 @@ I'd recommend copy/pasting until I get it properly packaged and bundled. I'll ma
 
 ## TODO
 
-* Fix module bundling
+* Fix module bundling and publish NPM package
+* Possibly hand-roll parser because our use-case is a lot simpler than the one `graphql/library/parser` is intended to support
 * Add support for querying functions
 
 Inspired by the conversation [here](https://github.com/open-source-ideas/open-source-ideas/issues/4)
