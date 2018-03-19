@@ -11,7 +11,7 @@ Currently it only supports selecting static properties, but I might add simple f
 
 ### As a Redux state selector
 
-```
+```js
 import { Component } from 'react';
 import { connect } from 'react-redux';
 import { graphqlImmutableSelector } from 'path-to-code';
@@ -27,7 +27,7 @@ export connect(graphqlImmutableSelector(gql))(MyUserComponent);
 
 ### As a standalone to select from state
 
-```
+```js
 import { graphqlImmutableSelector } from 'path-to-code';
 import { fromJS } from 'immutable';
 
@@ -47,7 +47,7 @@ const tedProperties = getUser(state);
 
 ### To parse GQL into an array of object paths
 
-```
+```js
 import { getPathsFromAst } from 'path-to-code';
 import { parse } from 'graphql/language';
 
